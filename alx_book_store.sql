@@ -1,5 +1,5 @@
--- DATABASE
-CREATE DATABASE alx_book_store
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 -- AUTHORS TABLE
 CREATE TABLE `alx_book_store`.`authors` (
