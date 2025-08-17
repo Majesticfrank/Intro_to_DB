@@ -1,5 +1,5 @@
 import mysql.connector
-# Connection parameters
+
 host = "localhost"
 user = "root"
 password = "Wallet"
@@ -12,7 +12,7 @@ conn = mysql.connector.connect(
 )
 
 if conn.is_connected():
-    print("✅ Connection successful!")
+    print("Connection successful!")
     cursor = conn.cursor()
     cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print("Database checked/created successfully.")
@@ -22,4 +22,4 @@ if conn.is_connected():
     conn.close()
     print("MySQL connection closed.")
 else:
-    print("❌ Connection failed!")
+    print("Connection failed!")
