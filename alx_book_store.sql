@@ -1,3 +1,6 @@
+-- DATABASE
+CREATE DATABASE alx_book_store
+
 -- AUTHORS TABLE
 CREATE TABLE `alx_book_store`.`authors` (
   `author_id` INT NOT NULL AUTO_INCREMENT,
