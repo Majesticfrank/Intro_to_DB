@@ -60,8 +60,7 @@ CREATE TABLE `alx_book_store`.`Order_details` (
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_orderdetails_books`
-    FOREIGN KEY (`book_id`)
-    REFERENCES `alx_book_store`.`books` (`book_id`)
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
