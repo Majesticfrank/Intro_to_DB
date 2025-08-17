@@ -41,8 +41,7 @@ CREATE TABLE `alx_book_store`.`Orders` (
   PRIMARY KEY (`order_id`),
   INDEX `customer_id_idx` (`customer_id` ASC) VISIBLE,
   CONSTRAINT `fk_orders_customers`
-    FOREIGN KEY (`customer_id`)
-    REFERENCES `alx_book_store`.`customers` (`customer_id`)
+   FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
