@@ -56,8 +56,7 @@ CREATE TABLE `alx_book_store`.`Order_details` (
   INDEX `order_id_idx` (`order_id` ASC) VISIBLE,
   INDEX `book_id_idx` (`book_id` ASC) VISIBLE,
   CONSTRAINT `fk_orderdetails_orders`
-    FOREIGN KEY (`order_id`)
-    REFERENCES `alx_book_store`.`orders` (`order_id`)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_orderdetails_books`
