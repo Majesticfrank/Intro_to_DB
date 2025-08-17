@@ -9,7 +9,7 @@ CREATE TABLE `alx_book_store`.Authors (
 );
 
 -- CUSTOMERS TABLE
-CREATE TABLE `alx_book_store`.`customers` (
+CREATE TABLE `alx_book_store`.`Customers` (
   customer_id INT NOT NULL AUTO_INCREMENT,
   customer_name VARCHAR(215) NOT NULL,
   email VARCHAR(215) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE `alx_book_store`.`customers` (
 );
 
 -- BOOKS TABLE
-CREATE TABLE `alx_book_store`.`books` (
+CREATE TABLE `alx_book_store`.`Books` (
   book_id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(130) NOT NULL,
   author_id INT NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `alx_book_store`.`books` (
 );
 
 -- ORDERS TABLE
-CREATE TABLE `alx_book_store`.`orders` (
+CREATE TABLE `alx_book_store`.`Orders` (
   order_id INT NOT NULL AUTO_INCREMENT,
   customer_id INT NOT NULL,
   order_date DATE NULL,
@@ -48,7 +48,7 @@ CREATE TABLE `alx_book_store`.`orders` (
 );
 
 -- ORDER DETAILS TABLE
-CREATE TABLE `alx_book_store`.`order_details` (
+CREATE TABLE `alx_book_store`.`Order_details` (
   orderdetailid INT NOT NULL AUTO_INCREMENT,
   order_id INT NOT NULL,
   book_id INT NOT NULL,
