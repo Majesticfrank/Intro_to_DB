@@ -47,7 +47,7 @@ CREATE TABLE `alx_book_store`.`Orders` (
 );
 
 -- ORDER DETAILS TABLE
-CREATE TABLE `alx_book_store`.`Order_details` (
+CREATE TABLE `alx_book_store`. Order_details (
   orderdetailid INT NOT NULL AUTO_INCREMENT,
   order_id INT NOT NULL,
   book_id INT NOT NULL,
