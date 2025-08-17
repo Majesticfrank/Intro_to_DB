@@ -2,9 +2,9 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 -- AUTHORS TABLE
-CREATE TABLE `alx_book_store`.`authors` (
-  `author_id` INT NOT NULL AUTO_INCREMENT,
-  `author_name` VARCHAR(215) NOT NULL,
+CREATE TABLE `alx_book_store`.Authors (
+  author_id INT NOT NULL AUTO_INCREMENT,
+  author_name VARCHAR(215) NOT NULL,
   PRIMARY KEY (`author_id`)
 );
 
