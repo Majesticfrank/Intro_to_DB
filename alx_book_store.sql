@@ -13,7 +13,7 @@ CREATE TABLE `alx_book_store`.`Customers` (
   customer_id INT NOT NULL AUTO_INCREMENT,
   customer_name VARCHAR(215) NOT NULL,
   email VARCHAR(215) NOT NULL,
-  `address` TEXT NULL,
+  address TEXT,
   PRIMARY KEY (`customer_id`)
 );
 
