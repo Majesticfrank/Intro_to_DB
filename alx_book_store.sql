@@ -10,20 +10,20 @@ CREATE TABLE `alx_book_store`.`authors` (
 
 -- CUSTOMERS TABLE
 CREATE TABLE `alx_book_store`.`customers` (
-  `customer_id` INT NOT NULL AUTO_INCREMENT,
-  `customer_name` VARCHAR(215) NOT NULL,
-  `email` VARCHAR(215) NOT NULL,
-  `address` TEXT NULL,
+  customer_id INT NOT NULL AUTO_INCREMENT,
+  customer_name VARCHAR(215) NOT NULL,
+  email VARCHAR(215) NOT NULL,
+  address  TEXT NULL,
   PRIMARY KEY (`customer_id`)
 );
 
 -- BOOKS TABLE
 CREATE TABLE `alx_book_store`.`books` (
-  `book_id` INT NOT NULL AUTO_INCREMENT,
-  `title` VARCHAR(130) NOT NULL,
-  `author_id` INT NOT NULL,
-  `price` DOUBLE NULL,
-  `publication_date` DATE NULL,
+  book_id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(130) NOT NULL,
+  author_id INT NOT NULL,
+  price DOUBLE NULL,
+  publication_date DATE NULL,
   PRIMARY KEY (`book_id`),
   INDEX `author_id_idx` (`author_id` ASC) VISIBLE,
   CONSTRAINT `fk_books_authors`
@@ -35,9 +35,9 @@ CREATE TABLE `alx_book_store`.`books` (
 
 -- ORDERS TABLE
 CREATE TABLE `alx_book_store`.`orders` (
-  `order_id` INT NOT NULL AUTO_INCREMENT,
-  `customer_id` INT NOT NULL,
-  `order_date` DATE NULL,
+  order_id INT NOT NULL AUTO_INCREMENT,
+  customer_id INT NOT NULL,
+  order_date DATE NULL,
   PRIMARY KEY (`order_id`),
   INDEX `customer_id_idx` (`customer_id` ASC) VISIBLE,
   CONSTRAINT `fk_orders_customers`
@@ -49,10 +49,10 @@ CREATE TABLE `alx_book_store`.`orders` (
 
 -- ORDER DETAILS TABLE
 CREATE TABLE `alx_book_store`.`order_details` (
-  `orderdetailid` INT NOT NULL AUTO_INCREMENT,
-  `order_id` INT NOT NULL,
-  `book_id` INT NOT NULL,
-  `quantity` DOUBLE NOT NULL,
+  orderdetailid INT NOT NULL AUTO_INCREMENT,
+  order_id INT NOT NULL,
+  book_id INT NOT NULL,
+  quantity DOUBLE NOT NULL,
   PRIMARY KEY (`orderdetailid`),
   INDEX `order_id_idx` (`order_id` ASC) VISIBLE,
   INDEX `book_id_idx` (`book_id` ASC) VISIBLE,
